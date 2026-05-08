@@ -1,0 +1,29 @@
+{
+  "name": "screenshot-mcp",
+  "version": "0.1.0",
+  "description": "MCP server that captures full-monitor screenshots (macOS, Linux, Windows, WSL2).",
+  "type": "module",
+  "bin": {
+    "screenshot-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "node node_modules/typescript/bin/tsc",
+    "start": "node dist/index.js",
+    "smoke": "node dist/smoke.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "screenshot-desktop": "^1.15.0",
+    "zod": "^4.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
